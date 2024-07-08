@@ -17,7 +17,7 @@ def bellman_ford(vertices, edges, start):
 if __name__ == "__main__":
     vertices = 5
     edges = [
-        (0, 1, -1),
+        (0, 1, -1), #u, v, cost
         (0, 2, 4),
         (1, 2, 3),
         (1, 3, 2),
