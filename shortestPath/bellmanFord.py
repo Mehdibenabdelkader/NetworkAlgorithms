@@ -13,3 +13,21 @@ def bellman_ford(vertices, edges, start):
             return None
 
     return distances
+
+if __name__ == "__main__":
+    vertices = 5
+    edges = [
+        (0, 1, -1),
+        (0, 2, 4),
+        (1, 2, 3),
+        (1, 3, 2),
+        (1, 4, 2),
+        (3, 2, 5),
+        (3, 1, 1),
+        (4, 3, -3)
+    ]
+    start_node = 0
+    distances = bellman_ford(vertices, edges, start_node)
+
+    if distances:
+        print("Shortest distances from start node:", distances)
