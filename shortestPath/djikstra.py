@@ -40,9 +40,9 @@ def shortest_path(previous_nodes, start, target):
 if __name__ == "__main__":
     graph = {
         'A': {'B': 1, 'C': 4},
-        'B': {'A': 1, 'C': 2, 'D': 5},
+        'B': {'A': 1, 'C': 2, 'D': 1},
         'C': {'A': 4, 'B': 2, 'D': 1},
-        'D': {'B': 5, 'C': 1}
+        'D': {'B': 1, 'C': 1}
     }
     start_node = 'A'
     end_node = 'D'
