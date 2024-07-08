@@ -36,3 +36,17 @@ def shortest_path(previous_nodes, start, target):
     path.reverse()
 
     return path
+
+if __name__ == "__main__":
+    graph = {
+        'A': {'B': 1, 'C': 4},
+        'B': {'A': 1, 'C': 2, 'D': 5},
+        'C': {'A': 4, 'B': 2, 'D': 1},
+        'D': {'B': 5, 'C': 1}
+    }
+    start_node = 'A'
+    end_node = 'D'
+
+    distances, previous_nodes = dijkstra(graph, start_node)
+    print("Shortest distances from start node:", distances)
+    print("Shortest path from start to end node:", shortest_path(previous_nodes, start_node, end_node))
