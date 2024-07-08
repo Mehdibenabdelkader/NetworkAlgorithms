@@ -24,3 +24,15 @@ def dijkstra(graph, start):
                 heapq.heappush(priority_queue, (distance, neighbor))
 
     return distances, previous_nodes
+
+def shortest_path(previous_nodes, start, target):
+    path = []
+    node = target
+
+    while node is not None:
+        path.append(node)
+        node = previous_nodes[node]
+
+    path.reverse()
+
+    return path
